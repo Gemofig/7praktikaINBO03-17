@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Koschka 
+{
+protected:
+	 string name1;
+public:
+	Koschka() { name1 = "Skaso4ka"; }
+};
+
+class Pes 
+{
+protected:
+	string name2;
+public:
+	Pes() { name2 = "Xarja"; }
+};
+
+class Popugai 
+{
+protected:
+	string name3;
+public:
+	Popugai() {name3 = "Povelitel Puxa"; }
+};
+
+struct Jivonoe : public Koschka, public Pes, public Popugai
+{
+	void getName()
+	{
+		cout << "Imja Koschki  : " << name1 << endl;
+		cout << "Imja Psa      : " << name2 << endl;
+		cout << "Imja Popugaja : " << name3 << endl;
+	}
+	~Jivonoe(){}
+};
+
+int main()
+{
+	Jivonoe zoo;
+	zoo.getName();
+	system("pause");
+	return 0;
+}
